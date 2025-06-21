@@ -4,7 +4,6 @@
     "keywords": ["thinkphp", "health"],
     "type": "library",
     "license": "MIT",
-    "version": "1.0.1",
     "support": {
         "issues": "https://github.com/ymiras/think-health/issues",
         "source": "https://github.com/ymiras/think-health"
