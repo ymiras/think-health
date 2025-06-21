@@ -1,0 +1,43 @@
+{
+    "name": "ymiras/think-health",
+    "description": "Health check for ThinkPHP",
+    "keywords": ["thinkphp", "health"],
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "support": {
+        "issues": "https://github.com/ymiras/think-health/issues",
+        "source": "https://github.com/ymiras/think-health"
+    },
+    "authors": [
+        {
+            "name": "ymiras",
+            "email": "support@ymiras.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "topthink/framework": "^6.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ymiras\\ThinkHealth\\": "src/"
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.75"
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "Ymiras\\ThinkHealth\\ServiceProvider"
+            ],
+            "config": {
+                "health": "config/config.php"
+            }
+        }
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix"
+    }
+}
