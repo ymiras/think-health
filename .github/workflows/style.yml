@@ -1,0 +1,23 @@
+name: Coding Style
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  php_cs_fixer:
+    name: php_cs_fixer
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          coverage: none
+      - name: Install Dependencies
+        run: composer install --no-progress
+      - name: Run PHP-CS-Fixer
+        run: composer cs-fix
